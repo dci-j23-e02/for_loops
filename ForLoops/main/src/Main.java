@@ -146,7 +146,7 @@ public class Main {
      * j:6 -> "Saturday":  {j:7  , print "weekDays[7]" Index 7 out of bounds for length 7 }
      * We don't want to have errors , therefore continue wouldf be the best solution
      * */
-    String[]  weekDays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+   /* String[]  weekDays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     int j =0;
     while( j < weekDays.length) {
       if(weekDays[j].equals("Saturday") || weekDays[j].equals("Sunday") ){
@@ -156,6 +156,48 @@ public class Main {
       System.out.println(weekDays[j]);
       j++;
     }
+*/
 
+    // Arrays and ForEach loops :
+      // One Dimension Arrays:
+    String [] names = {"Safwan", "Gizem", "Aria"};
+    // forEach
+  /*  for(String name : names){
+      System.out.println(name.length());
+    }
+    // for
+    for(int i = 0; i< names.length; i++){
+      System.out.println(names[i].length());
+    }
+*/
+    // 2 Dimension Arrays:
+
+    int [][] numbers = { {80, 90, 70} , {20, 80, 75} , {10, 15, 60} };
+
+    // forEach
+    // Calculate the Avg :
+    double total = 0;
+    for(int[] row: numbers){
+      System.out.println("Row ........");
+        for(int value : row){
+            System.out.println(value);
+            total = total + value;
+          }
+    }
+
+    double Avg = total / (numbers.length * numbers[0].length);
+
+    System.out.println("The total is :"+total);
+    System.out.println("The Avg is "+ Avg);
+
+
+/*
+    // for loop
+    for(int i =0 ; i < numbers.length; i++){
+      System.out.println("Row number ["+i+"]........");
+      for(int j = 0; j < numbers[i].length; j++){
+        System.out.println(numbers[i][j]);
+      }
+    }*/
   }
 }
